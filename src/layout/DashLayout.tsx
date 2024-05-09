@@ -19,7 +19,7 @@ const DashLayout: React.FC<AdminDashProps> = ({children}) => {
 
   return (
     <div className="w-full min-h-screen flex justify-center items-center bg-blac overflow-hidden">
-        <div className='w-[300px] shadow-md min-h-screen flex flex-col gap-6 px-[25px relative'>
+        <div className='w-[300px] shadow-m min-h-screen flex flex-col gap-6 px-[25px relative'>
           <div className='w-full h-[70px] bg-white z-30 flex justify-between items-center shadow-md'>
             <h5 className='font-bold text-[20px] pl-[20px]'>JAI</h5>
 

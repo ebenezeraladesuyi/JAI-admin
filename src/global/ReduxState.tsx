@@ -1,26 +1,31 @@
+/* eslint-disable react-refresh/only-export-components */
 
 import { createSlice } from "@reduxjs/toolkit";
-import { PayloadAction } from "@reduxjs/toolkit/dist/createAction";
 import {user} from "../types/interface"
+import { PayloadAction } from "@reduxjs/toolkit"
 
 
-const initialState = {
-    currentUser: {} as user | null,
+interface ReduxState {
+    currentUser: user | null; // Use the User interface
+}
+
+const initialState: ReduxState = {
+    currentUser: null,
 };
 
-const ReduxState = createSlice({
-    name: "volatic",
+const ReduxSlice = createSlice({
+    name: "jai",
     initialState,
     reducers: {
-        User: (state, { payload } : PayloadAction<user>) => 
+        User: (state, action : PayloadAction<user>) => 
         {
-            state.currentUser = payload
+            state.currentUser = action.payload
         }
     },
 });
 
-export const { User } = ReduxState.actions;
+export const { User } = ReduxSlice.actions;
 
-export default ReduxState.reducer;
+export default ReduxSlice.reducer;
 
 

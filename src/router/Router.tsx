@@ -7,9 +7,11 @@ import {lazy} from "react";
 // import Dogs from "../pages/Dogs";
 // import Cars from "../pages/Cars";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+// import Carrs from "../pages/Carrs";
 
 
-const Cars = lazy(() => import("../pages/Cars"))
+// const Cars = lazy(() => import("../pages/Cars"))
+const Carrs = lazy(() => import("../pages/Carrs"))
 // const Dogs = lazy(() => import("../pages/Dogs"))
 
 
@@ -23,7 +25,8 @@ const Router = () => {
                 path="/"
                 element={
                     
-                    <Cars />
+                    // <Cars />
+                    <Carrs />
                 }
                 />
 

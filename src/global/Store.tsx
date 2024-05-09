@@ -1,5 +1,5 @@
 
-import myReducer from "./ReduxState";
+import myReducer from "./ReduxState"
 import { configureStore } from "@reduxjs/toolkit";
 import { TypedUseSelectorHook } from "react-redux";
 import { useDispatch, useSelector } from "react-redux";
@@ -35,6 +35,7 @@ export const Store = configureStore({
 
 export const UseAppDispatch: () => typeof Store.dispatch = useDispatch;
 
+// eslint-disable-next-line react-refresh/only-export-components
 export const useAppSelector: TypedUseSelectorHook<
   ReturnType<typeof Store.getState>
 > = useSelector;
